@@ -1,0 +1,17 @@
+<div ng-controller="HomePage as home">
+    <section class="form-section">
+        <form name="Form" novalidate>
+            <div class="form-group" ng-class="{'has-error':Form.name.$dirty && Form.name.$invalid, 'has-success':Form.name.$valid}">
+             <span class="input-icon">
+                 <input ng-model="home.searchForm.input" type="text" name="name" class="form-control" placeholder="Search" ng-change="home.search()" ng-keydown="checkKeyDown($event)" ng-keyup="checkKeyUp($event)">
+                 <i class="fa fa-search"></i>
+            </span>
+                <span class="error text-small block" ng-if="Form.name.$dirty && Form.name.$invalid">Name is required</span>
+            </div>
+
+        </form>
+    </section>
+    <section class="list-section" ng-repeat="x in home.filteredList"> <!--track by $$hashKey-->
+        <content-block></content-block>
+    </section>
+</div>

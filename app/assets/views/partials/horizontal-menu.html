@@ -1,0 +1,41 @@
+<!-- start: HORIZONTAL MENU -->
+<div class="menu-wrapper" ng-model="horizontalNavbarCollapsed">
+
+		<ul class="nav navbar-nav no-border">
+			<li ui-sref-active="active">
+				<a ui-sref="app.help">
+					<div class="item-content">
+						<div class="item-inner">
+							<span class="title"> Help </span>
+						</div>
+					</div>
+				</a>
+			</li>
+			<li ui-sref-active="active">
+				<a ui-sref="app.team">
+					<div class="item-content">
+						<div class="item-inner">
+							<span class="title"> Our team </span>
+						</div>
+					</div>
+				</a>
+			</li>
+			<li ui-sref-active="active">
+				<a ui-sref="app.contact">
+					<div class="item-content">
+						<div class="item-inner">
+							<span class="title"> Contact us </span>
+						</div>
+					</div>
+				</a>
+			</li>
+		</ul>
+
+	<!-- start: MENU TOGGLER FOR MOBILE DEVICES -->
+	<div class="close-handle visible-xs-block visible-sm-block menu-toggler" ng-click="menuInit(true)" ng-swipe-up="menuInit(true)">
+		<div class="arrow-left"></div>
+		<div class="arrow-right"></div>
+	</div>
+	<!-- end: MENU TOGGLER FOR MOBILE DEVICES -->
+</div>
+<!-- end: HORIZONTAL MENU -->
